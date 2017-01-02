@@ -1,17 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Hello Coursera</title>
+	<title>Hello Coursera!</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="source/style.css">
 </head>
 <body>
-<h1> Hello Coursera Student!</h1>
-<p> My name is Daniel and here are my solutions from the AngularJs course </p>
-<a href="/Coursera-Angularjs/mod1_solution">Module 1 - Solution</a>
-<hr></hr>
-<a href="/Coursera-Angularjs/mod2_solution">Module 2 - Solution</a>
-<hr></hr>
-<a href="/Coursera-Angularjs/mod3_solution">Module 3 - Solution</a>
 
+    <h2 class="bg-primary">Hello this is my repo for <strong>Single page web apps with angularjs course</strong></h2>
+    <p class="text-center bg-info subh2">Here are the Task and my solutions for the <a class="text-danger" href="https://www.coursera.org/learn/single-page-web-apps-with-angularjs/home"><strong>Course</strong></a></p>
+<ul class="accordion-menu">
+  <li>
+    <div class="dropdownlink"><i class="fa fa-road" aria-hidden="true"></i> Task
+      <i class="fa fa-chevron-down" aria-hidden="true"></i>
+    </div>
+    <ul class="submenuItems">
+      <li><a href="#">Module 1 - Task</a></li>
+      <li><a href="#">Module 2 - Task</a></li>
+      <li><a href="#">Module 3 - Task</a></li>
+    </ul>
+  </li>
+  <li>
+    <div class="dropdownlink"><i class="fa fa-paper-plane" aria-hidden="true"></i> Solution
+      <i class="fa fa-chevron-down" aria-hidden="true"></i>
+    </div>
+    <ul class="submenuItems">
+      <li><a href="/Coursera-Angularjs/mod1_solution">Module 1 - Solution</a></li>
+      <li><a href="/Coursera-Angularjs/mod2_solution">Module 1 - Solution</a></li>
+      <li><a href="/Coursera-Angularjs/mod3_solution">Module 3 - Solution</a></li>
+    </ul>
+  </li>
+  <li>
+</ul>
+
+<div id="relevant-content" >
+	<blockquote class="text-warning">
+	This part is in construction...
+	But the solutions links work.
+	</blockquote>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src="source/menu.js"></script>
 </body>
 </html>
 <!-- browser-sync start --server --directory --files "**/*" -->
