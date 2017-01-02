@@ -13,7 +13,7 @@ function ToBuyController(ShoppingListCheckOffService){
 
 	toBuy.name="";
 	toBuy.quantity="";
-	//This boolean is for dont show the message 'Everything is bought!' on Start
+	
 	toBuy.list = ShoppingListCheckOffService.getItemsToBuy();
 
 	toBuy.addItem = function(){
