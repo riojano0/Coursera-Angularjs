@@ -1,0 +1,89 @@
+<div class=container>
+<!-- <fieldset> -->
+      <h2 class="menu-item-title">Registration</h2>
+      <form name='regForm' novalidate>
+      First Name
+        <input type="text" name="firstName" placeholder="Pick a First Name"
+          ng-model="reg.user.firstName"
+          required
+          minlength="4"
+          ng-maxlength="15"
+          class="bg-primary">
+          <!-- {{ reg.user.firstName }} -->
+          <span
+            ng-if="(regForm.firstName.$error.minlength || regForm.firstName.$error.required) && regForm.firstName.$touched">
+            First Name must be at least 4 characters long
+          </span>
+          <span ng-if="regForm.username.$error.maxlength && regForm.username.$touched">
+            First Name must not be longer than 15 characters
+          </span>
+          <br>
+        Last Name
+          <input type="text" name="lastName" placeholder="Pick a Last Name"
+          ng-model="reg.user.lastName"
+          required
+          minlength="3"
+          class="bg-primary">
+          <!-- {{ reg.user.username }} -->
+          <span
+            ng-if="(regForm.lastName.$error.minlength || regForm.lastName.$error.required) && regForm.lastName.$touched">
+            Last Name must be at least 3characters long
+          </span>
+          <br>
+
+        Email Address
+          <input type="email" name="email" placeholder="Email"
+          ng-model="reg.user.email"
+          required
+          class="bg-primary">
+          <span ng-if="regForm.email.$invalid && regForm.email.$touched">
+            Must be a valid email address: handle@domain format
+          </span>
+          <br>
+
+         Phone Number
+        <input type="text" name="phone" placeholder="Phone ###-###-####"
+          ng-model="reg.user.phone"
+          pattern="(\d{3})-(\d{3})-(\d{4})"
+          class="bg-primary"
+          required>
+          <span ng-if="regForm.phone.$invalid && regForm.phone.$touched">
+            Phone must be in the format ###-###-####.
+          </span>
+          <br>
+
+         Favorite Dish:
+        <input type="text" name="shortName" placeholder="Pick a dish (Use Uppercase Please)"
+          ng-model="reg.user.shortName" 
+          class="bg-primary"
+          ><span ng-if="regCtrl.valid"> {{regCtrl.itemName}}</span>
+          <!-- {{ reg.user.shortName }} -->
+
+          <br>
+          
+<!--         <button
+          ui-sref="public.menuitem({shortName: reg.user.shortName})"
+          class="btn btn-primary"
+          ng-disabled="regForm.$invalid"
+          ng-click="regCtrl.submit(reg.user)">Submit</button> -->
+          
+          <button
+          class="btn btn-primary"
+          ng-disabled="regForm.$invalid"
+          ng-click="regCtrl.submit(reg.user)">Submit</button>
+
+
+          <!-- <a ui-sref="public.menuitem({shortName:reg.user.shortName})">PRUEBA</a>
+          <button ng-click="regCtrl.getItem(reg.user.shortName)">Test Boton</button> -->
+
+          <div style="margin-top: 10px;">
+          <span ng-if="regCtrl.valid"> 
+          <!-- <span ng-if="regCtrl.itemExist">{{regCtrl.itemName}}</span>
+          </br> -->
+          Your Information has been saved 
+           </span>
+            <!-- Form valid? {{ regForm.$valid }} -->
+          </div>
+      </form>
+    <!-- </fieldset> -->
+</div>
